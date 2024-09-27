@@ -1,0 +1,906 @@
+<html lang="en">
+
+</html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        . {
+            margin: 0;
+            padding: 0;
+            border-sizing: border-box;
+        }
+
+        .nav1{
+            height: 10vh;
+            display: flex;
+            background-color: white;
+            color: black;
+            position: sticky;
+            top:0;
+            width:100%;
+            z-index:1000;
+            
+           
+
+        }
+
+        .left {
+            width: 60vw;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            height: 10vh;
+
+        }
+
+        .right {
+            width: 80vw;
+            height: 10vh;
+        }
+
+        .right ul {
+            height: 4vh;
+            width: 100%;
+            list-style: none;
+            gap: 1px;
+            font-size: 1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .right ul li {
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .right ul li:hover {
+            background-color:burlywood;
+            color: white;
+            cursor: pointer;
+            transition:  0.3s ease-in-out;
+        }
+
+        .img {
+            margin: 0;
+            padding: 0%;
+            height: 80vh;
+            background-size: 100% 100%;
+            color: white;
+            background-image: url('food.jpeg');
+            filter: brightness(85%);
+        }
+
+        .text {
+            text-align: center;
+        }
+
+        .heading {
+            padding-top: 8%;
+            text-align: center;
+            font-size: 3.5rem;
+            filter: contrast(90%);
+
+        }
+
+        .info {
+            margin-top: 1.6rem;
+            font-size: 1.2rem;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            filter: brightness(100%);
+        }
+
+        .reserve {
+            display: inline-block;
+            border: 1px solid burlywood;
+            border-radius: 4px;
+            padding: 10px;
+            margin-top: 0;
+            font-size: smaller;
+            block-size: 50px;
+        }
+
+        .reserve:hover {
+            background-color: burlywood;
+            color: white;
+            cursor: pointer;
+        }
+
+        .chef {
+            background-size: 100% 100%;
+            margin-left: 5%;
+            height: 100%;
+            width: 32%;
+            box-shadow: -10px -10px burlywood;
+
+        }
+
+        .chef-info {
+            text-align: center;
+            padding: 1rem;
+            font-size: 19px;
+
+        }
+
+        .head2 {
+            color: orange;
+        }
+
+        .setimg {
+
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .lorem {
+            line-height: 27px;
+        }
+
+        .reserve2 {
+            display: inline-block;
+            border: 1px solid burlywood;
+            border-radius: 4px;
+            padding: 5px;
+            margin-top: 0;
+            font-size: smaller;
+            block-size: 50px;
+        }
+
+        .reserve2:hover {
+            background-color: burlywood;
+            color: white;
+            cursor: pointer;
+        }
+
+        .food2 {
+            filter: brightness(80%);
+            background-image: url('food2.jpeg');
+            height: 45vh;
+            background-size: 100% 100%;
+            background-attachment: fixed;
+        }
+
+        .msg {
+            color: beige;
+        }
+
+        .text2 {
+            text-align: center;
+            padding-top: 8%;
+            font-size: larger;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+        }
+
+        .author {
+            text-align: center;
+        }
+
+        .name {
+            color: white;
+            padding-left: 22%;
+        }
+
+        .text3 {
+            text-align: center;
+        }
+
+        .menu1 {
+            font-size: larger;
+        }
+
+        ul,
+        li {
+            display: flex;
+            text-decoration: none;
+        }
+        .nav2{
+            height: 10vh;
+            display: flex;
+            background-color: white;
+            color: black;
+            position: sticky;
+            top:0;
+            
+
+        }
+
+        .menubar {
+            width: 100%;
+            list-style: none;
+            gap: 1px;
+            font-size: 1.1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-inline: auto;
+        }
+
+        .menubar ul li {
+            padding: 12px;
+            border-radius: 10px;
+            background-color: rgb(227, 219, 219);
+            margin: 2%;
+            margin-right: 0%;
+            margin-left: 2%;
+
+        }
+
+        .menubar ul li:hover {
+            background-color: burlywood;
+            color: white;
+            cursor: pointer;
+            transition:  0.3s ease-in-out;
+
+            
+        }
+
+        .menubar2 {
+            border: 1px solid gray;
+            padding: 0 3.5rem;
+            margin: auto;
+            border-radius: 4px;
+            text-align: center;
+            margin-left: 230%;
+
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            display: grid;
+            grid-template-rows: 30% 30% 30%;
+            grid-template-columns: 25% 25% 25%;
+            grid-gap: 25px;
+            margin-inline-start: 11%;
+            padding: 20px;
+
+        }
+
+        .child {
+            border: 1px solid burlywood;
+            overflow: hidden;
+            position: relative;
+
+        }
+
+        .child img {
+            object-fit: cover;
+            /* opacity: 55%; */
+            /* filter:  hue-rotate(30deg) saturate(3); */
+
+        }
+
+        .img-txt {
+            position: absolute;
+            top: 0.5%;
+            transform: translate(-50% -50%);
+            text-align: center;
+            color: white;
+            opacity: 0.8666;
+            /* background-color: rgba(161, 93, 11, 0.973); */
+            background-color: burlywood;
+
+        }
+
+        img-txt h1 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        img-txt p {
+            font-size: 15px;
+        }
+
+        .price {
+            position: relative;
+
+            text-align: left;
+            margin: 2%;
+
+        }
+
+        .left-bottom-text {
+            position: absolute;
+
+        }
+
+        .gallery {
+            text-align: center;
+        }
+
+        .container1 {
+            width: 100vw;
+            height: 70vh;
+            background-color: white;
+            display: grid;
+            grid-template-rows: 40% 40% 40%;
+            grid-template-columns: 25% 25% 25%;
+            grid-gap: 50px;
+            margin-inline-start: 11%;
+            padding: 20px;
+        }
+         .gallery1{
+            transition:transform 0.5s ease-in-out;
+        }
+        .gallery1:hover{
+            transform:scale(1.1);
+        }
+
+        .reviews {
+            text-align: center;
+            margin-top: 0%;
+
+        }
+
+        .ceo {
+            text-align: center;
+
+        }
+
+        .ceoname {
+            text-align: center;
+        }
+
+        .cris {
+            color: rgb(185, 126, 49);
+        }
+
+        .fox {
+            font-size: large;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .footer {
+            width: 100%;
+            height: 100%;
+            background-color: rgb(127, 255, 133);
+            display: grid;
+            grid-template-rows: 20% 60% 20% 20%;
+            grid-template-columns: 25% 25% 25% 25%;
+        }
+
+        /* .foot{
+        border: 1px solid red;
+       } */
+        #one {
+            padding-left: 3%;
+            padding-top: 0%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 430px;
+            color: white;
+            font-size: larger;
+            grid-column: 1/span 4;
+            background-color: burlywood;
+        }
+
+        #six {
+            grid-column: 1/span 4;
+        }
+
+        .icon-txt {
+            display: inline-block;
+            margin-left: 3%;
+
+        }
+
+        .fa-phone {
+            margin-right: 30px;
+            font-size: xx-large;
+            margin-top: 20px;
+
+        }
+
+        .fa-envelope {
+            text-align: center;
+            margin-right: 30px;
+            font-size: xx-large;
+            margin-top: 20px;
+
+        }
+
+        #two {
+            background-color: rgba(52, 45, 45, 0.973);
+            color: white;
+            text-align: center;
+
+        }
+
+        .about {
+            margin-top: 18%;
+        }
+
+        #three {
+            background-color: rgba(52, 45, 45, 0.973);
+            color: white;
+            text-align: center;
+        }
+
+        .open {
+            margin-top: 18%;
+        }
+
+        #four {
+            background-color: rgba(52, 45, 45, 0.973);
+            color: white;
+            text-align: center;
+        }
+
+        .contact {
+            margin-top: 18%;
+        }
+
+        #five {
+            background-color: rgba(52, 45, 45, 0.973);
+            color: white;
+            text-align: center;
+        }
+
+        .sub {
+            margin-top: 18%;
+        }
+
+        .table {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr;
+            background-color: black;
+            /* border: 1px solid red; */
+            width: 70%;
+            margin-left: 17%;
+
+
+        }
+
+        .row1 {
+            grid-column: 1;
+            height: 30px;
+            text-align: center;
+            /* border-bottom: 1 px solid blue;  */
+
+        }
+
+        .table1 {
+            display: grid;
+            grid-template-rows: 1fr 2fr;
+            grid-template-columns: 1fr;
+            background-color: burlywood;
+            /* border: 1px solid red; */
+            width: 70%;
+            margin-left: 17%;
+        }
+
+        .row2 {
+            height: 20px;
+            text-align: center;
+        }
+        
+
+        /* .fa-facebook{
+        background-color:black ;
+        font-size: xx-large;
+       } */
+        .fb1 {
+            background-color: white;
+            border-radius: 50%;
+            float: left;
+            margin-left: 16%;
+        }
+
+        .insta {
+            background-color: white;
+            border-radius: 30%;
+            float: left;
+            margin-left: 5%;
+
+        }
+
+        .twi {
+            background-color: white;
+            border-radius: 60%;
+            float: left;
+            margin-left: 5%;
+        }
+
+        .in {
+            background-color: white;
+            border-radius: 55%;
+            float: left;
+            margin-left: 5%;
+        }
+
+        .g {
+            background-color: white;
+            border-radius: 50%;
+            float: left;
+            margin-left: 5%;
+        }
+
+        #six {
+            background-color: black;
+            text-align: center;
+            color: white;
+        }
+
+        .last {
+            margin-top: 4%;
+            font-size: larger;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 24px;
+            border: none;
+            outline: none;
+            color: black;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            /* Important for vertical align on mobile phones */
+            margin: 0;
+        }
+
+        .navbar a:hover,
+        .dropdown:hover .dropbtn {
+            background-color:burlywood;
+            border-radius: 10px;
+            height: 50px;
+
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            font-size: smaller;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav1">
+        <div class="left">
+            <img src="Logo_1.1.png" alt="" height="60px">
+        </div>
+        <div class="right">
+            <ul>
+                <li style="background-color: burlywood;">Home</li>
+                <li>Menu</li>
+                <li>About</li>
+                <!-- <li >Pages</li> -->
+                <div class="dropdown">
+                    <button class="dropbtn">Pages
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">Reservation</a>
+                        <a href="#">Staff</a>
+                        <a href="#">Gallery</a>
+                    </div>
+                </div>
+                <!-- <li>Blog</li> -->
+                <div class="dropdown">
+                    <button class="dropbtn">Blog
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">Blog</a>
+                        <a href="#">Single Blog</a>
+                    </div>
+                </div>
+                <li>Contact</li>
+            </ul>
+        </div>
+        </div>
+        </div>
+    </nav>
+    <div class="img">
+        <div class="text">
+            <h1 class="heading">Welcome To <br> The Food Place</h1>
+            <p class="info">See how your users experience your website in realtime or<br>
+                view trends to see any changes in performance over time.
+            </p>
+            <div class="reserve">
+                <h2>RESERVATION</h2>
+            </div>
+        </div>
+
+    </div>
+    <br><br><br>
+    <div class="setimg">
+        <div class="chef">
+            <img src="chef.jpeg" alt="" height="320px">
+        </div>
+        <div class="chef-info">
+            <h1 class="head1">Welcome To <span class="head2">The Food Place</span></h1>
+            <p>Little Story</p>
+            <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing . Omnis cumque <br>corrupti, illo porro,
+                eum possimus inventore amet impedit<br> voluptas quam tempore accusamus sit, quia aspernatur! Vitae sed
+                ,<br>at,rem eaque magni modi alias excepturi, libero aspernatur, necessitatibus minus <br>porro itaque
+                tempore fuga aliquid molestiae voluptas. <br>Quaerat praesentium non saepe delectus?</p>
+            <div class="reserve2">
+                <h2> RESERVATION</h2>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+    <div class="food2">
+        <div class="text2">
+            <h2 class="msg">"Tf you're not the one cooking, stay out of the way and compliment the <br>chef."</h2>
+            <div class="author">
+                <h3 class="name">-Michael Strahan</h3>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <div class="text3">
+        <h1 class="menu">Special Menu</h1>
+        <p class="menu1">Lorem Ipsum is simply dummy text of the printing and typesetting.</p>
+    </div>
+    <br><br>
+    <nav class="nav2">
+        <div class="list">
+            <div class="menubar">
+                <ul class="menubar2">
+                    <li style="background-color: burlywood;">ALL</li>
+                    <li>DRINKS</li>
+                    <li>LUNCH</li>
+                    <li>DINNER</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br><br>
+    <div class="container">
+        <div class="child">
+            <img src="drink1.jpeg" alt="" height="200px" width="375px">
+            <div class="img-txt">
+                <h1>Special Drink 1</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, excepturi!</p>
+                <h4 style="color: black;">...............................................</h4>
+                <div class="price">
+                    <h3 class="left-botton-text">$7.99</h3>
+                </div>
+            </div>
+        </div>
+        <div class="child">
+            <img src="drink2.jpeg" alt="" height="200px" width="375px">
+            <div class="img-txt">
+                <h1>Special Drink 2</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, excepturi!</p>
+                <h4 style="color: black;">...............................................</h4>
+                <div class="price">
+                    <h3 class="left-botton-text">$7.99</h3>
+                </div>
+            </div>
+        </div>
+        <div class="child">
+            <img src="drink3.jpeg" alt="" height="200px" width="375px">
+            <div class="img-txt">
+                <h1>Special Drink 3</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, excepturi!</p>
+                <h4 style="color: black;">...............................................</h4>
+                <div class="price">
+                    <h3 class="left-botton-text">$7.99</h3>
+                </div>
+
+            </div>
+        </div>
+        <div class="child">
+            <img src="lunch1.jpeg" alt="" height="200px" width="375px">
+            <div class="img-txt">
+                <h1>Special Lunch 1</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, excepturi!</p>
+                <h4 style="color: black;">...............................................</h4>
+                <div class="price">
+                    <h3 class="left-botton-text">$7.99</h3>
+                </div>
+            </div>
+        </div>
+        <div class="child">
+            <img src="lunch2.jpeg" alt="" height="200px" width="375px">
+            <div class="img-txt">
+                <h1>Special Lunch 2</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, excepturi!</p>
+                <h4 style="color: black;">...............................................</h4>
+                <div class="price">
+                    <h3 class="left-botton-text">$7.99</h3>
+                </div>
+            </div>
+        </div>
+        <div class="child">
+            <img src="lunch3.jpeg" alt="" height="200px" width="375px">
+            <div class="img-txt">
+                <h1>Special Lunch 3</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, excepturi!</p>
+                <h4 style="color: black;">...............................................</h4>
+                <div class="price">
+                    <h3 class="left-botton-text">$7.99</h3>
+                </div>
+            </div>
+        </div>
+        <div class="child">
+            <img src="dinner1.jpeg" alt="" height="200px" width="375px">
+            <div class="img-txt">
+                <h1>Special Dinner1</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, excepturi!</p>
+                <h4 style="color: black;">...............................................</h4>
+                <div class="price">
+                    <h3 class="left-botton-text">$7.99</h3>
+                </div>
+
+            </div>
+        </div>
+        <div class="child">
+            <img src="dinner2.jpeg" alt="" height="200px" width="375px">
+            <div class="img-txt">
+                <h1>Special Dinner1</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, excepturi!</p>
+                <h4 style="color: black;">...............................................</h4>
+                <div class="price">
+                    <h3 class="left-botton-text">$7.99</h3>
+                </div>
+
+            </div>
+        </div>
+        <div class="child">
+            <img src="dinner3.jpeg" alt="" height="200px" width="375px">
+            <div class="img-txt">
+                <h1>Special Dinner1</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, excepturi!</p>
+                <h4 style="color: black;">...............................................</h4>
+                <div class="price">
+                    <h3 class="left-botton-text">$7.99</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <br><br>
+    <div class="gallery">
+        <h1 class="menu">Gallery</h1>
+        <p class="menu1">Lorem Ipsum is simply dummy text of the printing and typesetting.</p>
+    </div>
+    <br><br>
+    <div class="container1">
+        <div class="gallery1">
+            <img src="g1.jpg" alt="" height="200px" width="375px">
+        </div>
+        <div class="gallery1">
+            <img src="g2.jpg" alt="" height="200px" width="375px">
+        </div>
+        <div class="gallery1">
+            <img src="g3.jpg" alt="" height="200px" width="375px">
+        </div>
+        <div class="gallery1">
+            <img src="g4.jpg" alt="" height="200px" width="375px">
+        </div>
+        <div class="gallery1">
+            <img src="g5.jpg" alt="" height="200px" width="375px">
+        </div>
+        <div class="gallery1">
+            <img src="g6.jpg" alt="" height="200px" width="375px">
+        </div>
+    </div>
+
+    <div class="reviews">
+        <h1 class="menu">Customer Reviews</h1>
+        <p class="menu1">Lorem Ipsum is simply dummy text of the printing and typesetting.</p>
+    </div>
+    <br>
+    <div class="ceo">
+        <img src="ceo.jpg" alt="" height="200px" style="border-radius: 50%; ">
+    </div>
+    <br>
+    <div class="ceoname">
+        <h1 class="cris">Cris Fox </h1>
+        <p class="fox">CEO at Might Tech.</p>
+        <p class="ceoinfo">Lorem ipsum dolor sit amet consectetur adipisicing . Facere nemo debitis<br> incidunt rerum
+            vel quidem doloremque error, labore quia id, quasi eius voluptatibus? <br>Architecto voluptatum quibusdam
+            ut, ab officia aut?</p>
+    </div>
+    <br><br>
+    <div class="footer">
+        <div class="foot" id="one">
+            <div class="icon-txt">
+                <i class="fa fa-phone"></i>
+                <span>Phone <br> +01-123-456-4590
+                </span>
+            </div>
+            <div class="env">
+                <i class="fa fa-envelope"></i>
+                <span>Email <br>shrustij12@gmail.com
+                </span>
+            </div>
+            <div class="loc">
+                <img src="vecteezy_map-location-icon-eps-10_10737907.jpg" alt="" height="40px" width="40px">
+                <span>Location <br>800,Lorem Street,US
+                </span>
+            </div>
+
+
+        </div>
+        <div class="foot" id="two">
+            <h2 class="about">ABOUT US</h2>
+            <h4 style="color: burlywood;">..............................................................</h4>
+            <p class="abtinfo">Lorem ipsum, dolor sit amet <br>consectetur adipisicing elit. Nam <br>adipisci quasi
+                consectetur ab debitis <br>voluptates similique ipsa consequatur, <br>ad tempore velit tempora quo,
+                <br>labore itaque?</p>
+        </div>
+        <div class="foot" id="three">
+            <h2 class="open">OPENING HOURS</h2>
+            <h4 style="color: burlywood;">..............................................................</h4>
+            <p class="opninfo">Monday : Closed<br>Tue-Wed : 09am - 10pm<br>Thu-Fri : 09am - 10pm<br>Sat-Sun : 09am -
+                10pm</p>
+        </div>
+        <div class="foot" id="four">
+            <h2 class="contact">CONTACT INFORMATION</h2>
+            <h4 style="color: burlywood;">..............................................................</h4>
+            <p>Ipsum Street, Lorem Tower, MO, Columbia, 50800<br>+01 2000 800 9999<br>info@admin.com</p>
+        </div>
+        <div class="foot" id="five">
+            <h2 class="sub">SUBSCRIBE</h2>
+            <h4 style="color: burlywood;">..............................................................</h4>
+            <div class="table">
+                <div class="row1">
+                    <p>Email Address..</p>
+                </div>
+            </div>
+            <div class="table1">
+                <div class="row2">
+                    <h3>SUBSCRIBE</h3>
+                </div>
+            </div>
+            <br><br>
+            <div class="logos">
+                <div class="fb">
+                    <!-- <i class="fa fa-facebook" ></i> -->
+                    <span> <img src="fb1.png" class=fb1 height="35px">
+                        <img src="insta.png" class="insta" height="35px">
+                        <img src="twi1.png" class="twi" height="37px">
+                        <img src="in1.png" class="in" height="37px">
+                        <img src="g+.png" class="g" height="34px">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="foot" id="six">
+            <p class="last"> All Rights Reserved.© 2022 The Food Place</p>
+        </div>
+    </div>
+    </div>
+
+</body>
+
+</html>
